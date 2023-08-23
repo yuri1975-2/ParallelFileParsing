@@ -19,4 +19,4 @@ StorageImplementation class-implementation of FileParsingThread::IStorage interf
 
 ThreadsHolder class-maintains pool of currently active file parsing threads and synchronizes execution of main thread with them. Also implements FileParsingThread::IObserver interface.
 
-ParallelFileParsing-module contained entry point.
+ParallelFileParsing-module contains entry point.
