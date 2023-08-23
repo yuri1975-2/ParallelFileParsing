@@ -10,6 +10,13 @@ IMPLEMENTATION:
 
 Thread-Java-like class incapsulating work with C++ thread;
 
-FileParsingThread-thread for file parsing. Parse file by means of ifstream >> operator ('cause white characters are delimiters). Define interfaces:
+FileParsingThread class-thread for file parsing. Parse file by means of ifstream >> operator ('cause white characters are delimiters). Declares interfaces:
       -IStorage-for synchronous saving of parsing result;
-      -IObserver-for notification of current thread completion. Upon completion the new thred
+      -IObserver-for notification of current thread completion.
+Upon completion class by means of IObserver implementation creates new thread processing a new file.
+
+StorageImplementation class-implementation of FileParsingThread::IStorage interface.
+
+ThreadsHolder class-maintains pool of currently active file parsing threads and synchronizes execution of main thread with them. Also implements FileParsingThread::IObserver.
+
+ParallelFileParsing-module contained entry point.
