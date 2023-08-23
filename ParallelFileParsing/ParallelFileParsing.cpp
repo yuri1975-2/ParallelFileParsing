@@ -30,7 +30,11 @@ int main(int count, char** args)
 	}
 
 	int threadsNumber(0);
-	const int threadsNumberAdvise(static_cast<int>(1.5 * thread::hardware_concurrency()));
+	int threadsNumberAdvise(static_cast<int>(1.5 * thread::hardware_concurrency()));
+	if (threadsNumberAdvise < 1)
+	{
+		threadsNumberAdvise = 1;
+	}
 	auto [ptr, ec](from_chars(args[3], args[3] + strlen(args[3]), threadsNumber));
 	if ((0 == threadsNumber) || (threadsNumber > threadsNumberAdvise))
 	{
