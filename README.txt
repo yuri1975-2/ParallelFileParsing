@@ -17,6 +17,6 @@ Upon completion thread by means of IObserver implementation creates new thread p
 
 StorageImplementation class-implementation of FileParsingThread::IStorage interface.
 
-ThreadsHolder class-maintains pool of currently active file parsing threads and synchronizes execution of main thread with them. Also implements FileParsingThread::IObserver.
+ThreadsHolder class-maintains pool of currently active file parsing threads and synchronizes execution of main thread with them. Also implements FileParsingThread::IObserver interface.
 
 ParallelFileParsing-module contained entry point.
