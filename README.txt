@@ -8,7 +8,7 @@ Program retrieving in command line parameters:
 
 IMPLEMENTATION:
 
-Thread-Java-like class incapsulating work with C++ thread;
+Thread-class incapsulating work with C++ thread;
 
 FileParsingThread class-thread for file parsing. Parse file by means of ifstream >> operator ('cause white characters are delimiters). Declares interfaces:
       -IStorage-for synchronous saving of parsing result;
